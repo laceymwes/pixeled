@@ -14,8 +14,10 @@
     <nav class="navbar navbar-expand-sm sticky-top border-bottom border-primary-subtle bg-body-tertiary">
         <div class="container">
             <a class="navbar-brand theme-primary" href="#">Lame Dungeon</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dungeonNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler dungeon-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dungeonNav" aria-controls="dungeonNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="dungeon-toggler-bar"></span>
+                <span class="dungeon-toggler-bar"></span>
+                <span class="dungeon-toggler-bar"></span>
             </button>
             <div class="collapse navbar-collapse" id="dungeonNav">
                 <ul class="navbar-nav ms-auto">
@@ -63,18 +65,16 @@
         </div>
     </section>
 
-    <!-- AI Disclaimer -->
-    <div class="container mt-5">
-        <div class="alert alert-info border-primary-subtle" role="alert">
-            <strong>A note from the dungeon keeper:</strong> AI tools were used to help build this website.
-            However, <strong>all artwork displayed here is 100% human-made</strong> — every pixel placed by hand, no generators, no shortcuts.
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer class="border-top border-primary-subtle py-4 mt-5">
-        <div class="container text-center text-body-secondary">
-            <small>&copy; Michael Lacey &middot; Lame Dungeon Art</small>
+        <div class="container">
+            <div class="text-center text-body-secondary mb-3">
+                <small>&copy; Michael Lacey &middot; Lame Dungeon Art</small>
+            </div>
+            <div class="callout callout-info border-primary-subtle">
+                <strong>A note from the dungeon keeper:</strong> AI tools were used to help build this website.
+                However, <strong>all artwork displayed here is 100% human-made</strong> — every pixel placed by hand, no generators, no shortcuts.
+            </div>
         </div>
     </footer>
 

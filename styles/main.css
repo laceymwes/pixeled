@@ -18,6 +18,28 @@ body {
   text-shadow: 0 0 40px color-mix(in srgb, var(--bs-primary-base) 30%, transparent);
 }
 
+/* ── Nav toggler ── */
+.dungeon-toggler {
+  border: 1px solid var(--bs-primary-border) !important;
+  padding: 0.4rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+}
+
+.dungeon-toggler:focus {
+  box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--bs-primary-base) 40%, transparent);
+}
+
+.dungeon-toggler-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--bs-primary-fg);
+  border-radius: 1px;
+}
+
 /* ── Hero section ── */
 .dungeon-hero {
   min-height: 70vh;
@@ -40,6 +62,16 @@ body {
   object-fit: contain;
   background: var(--bs-primary-bg-subtle);
   padding: 1rem;
+}
+
+/* ── Callout ── */
+.callout {
+  padding: 1rem;
+  border-left: 0.25rem solid var(--bs-primary-border);
+  border-radius: var(--bs-radius-5);
+  background: var(--bs-primary-bg-subtle);
+  color: var(--bs-body-color);
+  font-size: 0.875rem;
 }
 
 /* ── Smooth scroll ── */
