@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<!-- author: michael lacey -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lame Dungeon Art</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link href="./styles/main.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- Sticky Nav -->
+    <nav class="navbar navbar-expand-sm sticky-top border-bottom border-primary-subtle bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand theme-primary" href="#">Lame Dungeon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dungeonNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="dungeonNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro">The Gate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#entities">Entities</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro / Hero -->
+    <section id="intro" class="dungeon-hero d-flex align-items-center justify-content-center text-center">
+        <div class="container py-5">
+            <h1 class="display-3 fw-bold heading-glow">Welcome to the lamest dungeon on the internet...</h1>
+            <p class="lead mt-3 text-body-secondary">A portfolio of pixel art, character designs, and other creatures found lurking in the dark.</p>
+            <a href="#entities" class="btn btn-outline theme-primary mt-4">Descend</a>
+        </div>
+    </section>
+
+    <!-- Entities -->
+    <section id="entities" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold heading-glow">~ Entities ~</h2>
+                <p class="text-body-secondary">The creatures that wander these halls.</p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <!-- Entity cards go here -->
+                <div class="col">
+                    <div class="card entity-card h-100 border-primary-subtle">
+                        <img src="./art/entities/bread-sensei.gif" class="card-img-top entity-img" alt="Bread Sensei">
+                        <div class="card-body">
+                            <h5 class="card-title theme-primary">Bread Sensei</h5>
+                            <p class="card-text text-body-secondary">An ancient loaf of wisdom. His crust has seen centuries.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate a <div class="col">...</div> block for each entity -->
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Disclaimer -->
+    <div class="container mt-5">
+        <div class="alert alert-info border-primary-subtle" role="alert">
+            <strong>A note from the dungeon keeper:</strong> AI tools were used to help build this website.
+            However, <strong>all artwork displayed here is 100% human-made</strong> — every pixel placed by hand, no generators, no shortcuts.
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-top border-primary-subtle py-4 mt-5">
+        <div class="container text-center text-body-secondary">
+            <small>&copy; Michael Lacey &middot; Lame Dungeon Art</small>
+        </div>
+    </footer>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+</body>
+</html>

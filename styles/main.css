@@ -1,0 +1,48 @@
+body {
+  --bs-radius-5: 0.5rem;
+  --bs-spacer: 1rem;
+  --bs-primary-base: var(--bs-purple-500);
+  --bs-primary-bg: var(--bs-primary-base);
+  --bs-primary-bg-subtle: light-dark(var(--bs-purple-100), var(--bs-purple-900));
+  --bs-primary-fg: light-dark(var(--bs-purple-600), var(--bs-purple-400));
+  --bs-primary-border: light-dark(var(--bs-purple-300), var(--bs-purple-600));
+}
+
+/* ── Purple accent utility ── */
+.theme-primary {
+  color: var(--bs-primary-fg) !important;
+}
+
+.heading-glow {
+  color: var(--bs-primary-fg);
+  text-shadow: 0 0 40px color-mix(in srgb, var(--bs-primary-base) 30%, transparent);
+}
+
+/* ── Hero section ── */
+.dungeon-hero {
+  min-height: 70vh;
+  border-bottom: 1px solid var(--bs-primary-bg-subtle);
+}
+
+/* ── Entity cards ── */
+.entity-card {
+  background: var(--bs-body-bg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.entity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--bs-primary-base) 20%, transparent);
+}
+
+.entity-img {
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: var(--bs-primary-bg-subtle);
+  padding: 1rem;
+}
+
+/* ── Smooth scroll ── */
+html {
+  scroll-behavior: smooth;
+}
