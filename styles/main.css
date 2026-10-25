@@ -48,6 +48,8 @@ body {
 
 /* ── Entity cards ── */
 .entity-card {
+  max-width: 18rem;
+  margin-inline: auto;
   background: var(--bs-body-bg);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -62,6 +64,23 @@ body {
   object-fit: contain;
   background: var(--bs-primary-bg-subtle);
   padding: 1rem;
+}
+
+.entity-meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.entity-meta dt {
+  color: var(--bs-primary-fg);
+  font-weight: 600;
+}
+
+.entity-meta dd {
+  margin: 0;
+  color: var(--bs-secondary-color);
 }
 
 /* ── Callout ── */

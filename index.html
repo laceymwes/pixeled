@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lame Dungeon Art</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-    <link href="./styles/main.css?v=2" rel="stylesheet"/>
+    <link href="./styles/main.css?v=4" rel="stylesheet"/>
 </head>
 <body>
 
@@ -49,7 +49,7 @@
                 <p class="text-body-secondary">The creatures that wander these halls.</p>
             </div>
 
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
                 <!-- Entity cards go here -->
                 <div class="col">
                     <div class="card entity-card h-100 border-primary-subtle">
@@ -58,9 +58,17 @@
                             <h5 class="card-title theme-primary">Bread Sensei</h5>
                             <p class="card-text text-body-secondary">An ancient loaf of wisdom. His crust has seen centuries.</p>
                         </div>
+                        <div class="card-footer bg-transparent border-primary-subtle">
+                            <dl class="entity-meta mb-0">
+                                <dt>Inspired by</dt>
+                                <dd>Master Roshi (<cite>Dragon Ball</cite>)</dd>
+                                <dt>Idea by</dt>
+                                <dd>Crouton</dd>
+                            </dl>
+                        </div>
                     </div>
                 </div>
-                <!-- Duplicate a <div class="col">...</div> block for each entity -->
+                <!-- Duplicate a <div class="col">...</div> block for each entity. Footer fields: Inspired by — "Character (<cite>Source work</cite>)", Idea by (omit a pair if not applicable) -->
             </div>
         </div>
     </section>
@@ -75,6 +83,10 @@
                 <strong>A note from the dungeon keeper:</strong> AI tools were used to help build this website.
                 However, <strong>all artwork displayed here is 100% human-made</strong> — every pixel placed by hand, no generators, no shortcuts.
             </div>
+            <p class="small text-body-secondary text-center mt-3 mb-0">
+                Characters and works named under "Inspired by" are the property of their respective owners and are referenced for attribution only.
+                This site is not affiliated with, sponsored, or endorsed by them. All artwork shown is original.
+            </p>
         </div>
     </footer>
 
