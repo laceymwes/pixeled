@@ -9,13 +9,20 @@ Single-page layout with a dark aesthetic and purple accent color.
 - **Theme**: `data-bs-theme="dark"` on `<html>`
 - **Custom styles**: `styles/main.css` — all custom CSS lives here
 - **No build step** — plain HTML/CSS, served as static files
+- **Bootstrap 6 class names differ from Bootstrap 5.** Unknown classes fail silently, so use the v6 names:
+  - Responsive prefixes: `sm:navbar-expand`, `md:row-cols-3`, `lg:col-6` (not `navbar-expand-sm` / `row-cols-md-3`)
+  - Text: `fg-3` (not `text-body-secondary`) · `fs-lg` (not `lead`) · `fs-4xl`/`fs-5xl` (not `display-*`)
+  - Surfaces: `border-subtle-primary` (not `border-primary-subtle`) · `bg-2` (not `bg-body-tertiary`)
+  - CSS vars: `--bs-bg-body`, `--bs-fg-body`, `--bs-fg-3` (not `--bs-body-bg`, `--bs-body-color`, `--bs-secondary-color`)
+  - No `.navbar-collapse` in v6 — the nav uses `.collapse.dungeon-collapse` (see `main.css`)
+  - When unsure, grep the CDN CSS for the class before using it
 
 ## Design System
 - **Primary color**: Purple — overridden via `--bs-primary-*` variables mapped to `--bs-purple-*`
 - **Accent utility class**: `.theme-primary` for purple-colored text
 - **Heading effect**: `.heading-glow` adds a purple text-shadow to section titles
 - **Card hover**: `.entity-card` lifts and glows purple on hover
-- Dark surfaces with purple borders (`border-primary-subtle`) as visual separators
+- Dark surfaces with purple borders (`border-subtle-primary`) as visual separators
 - Do NOT introduce additional accent colors without asking
 
 ## File Structure
@@ -26,7 +33,7 @@ art/entities/           — entity/character art assets and related pages
 ```
 
 ## Conventions
-- Mobile-first, responsive layout using Bootstrap grid (`row-cols-1 / sm-2 / md-3`)
+- Mobile-first, responsive layout using Bootstrap grid (`row-cols-1 sm:row-cols-2 md:row-cols-3 lg:row-cols-4`)
 - Sections use dungeon-flavored headings (e.g. "The Gate", "~ Entities ~")
 - Entity cards follow a repeatable pattern: `.card.entity-card` with image + body
 - Keep all CSS in `styles/main.css` — no inline styles, no additional CSS files

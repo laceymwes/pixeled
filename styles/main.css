@@ -40,6 +40,21 @@ body {
   border-radius: 1px;
 }
 
+/* ── Nav links: collapsed under the toggler on phones, inline from sm up.
+   Bootstrap 6 has no .navbar-collapse, so this fills that role. ── */
+.dungeon-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+}
+
+@media (width >= 576px) {
+  .dungeon-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    block-size: auto !important;
+  }
+}
+
 /* ── Hero section ── */
 .dungeon-hero {
   min-height: 70vh;
@@ -50,7 +65,7 @@ body {
 .entity-card {
   max-width: 18rem;
   margin-inline: auto;
-  background: var(--bs-body-bg);
+  background: var(--bs-bg-body);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -80,7 +95,7 @@ body {
 
 .entity-meta dd {
   margin: 0;
-  color: var(--bs-secondary-color);
+  color: var(--bs-fg-3);
 }
 
 /* ── Callout ── */
@@ -89,7 +104,7 @@ body {
   border-left: 0.25rem solid var(--bs-primary-border);
   border-radius: var(--bs-radius-5);
   background: var(--bs-primary-bg-subtle);
-  color: var(--bs-body-color);
+  color: var(--bs-fg-body);
   font-size: 0.875rem;
 }
 

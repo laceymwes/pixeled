@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lame Dungeon Art</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-    <link href="./styles/main.css?v=4" rel="stylesheet"/>
+    <link href="./styles/main.css?v=5" rel="stylesheet"/>
 </head>
 <body>
 
     <!-- Sticky Nav -->
-    <nav class="navbar navbar-expand-sm sticky-top border-bottom border-primary-subtle bg-body-tertiary">
+    <nav class="navbar sm:navbar-expand sticky-top border-bottom border-subtle-primary bg-2">
         <div class="container">
             <a class="navbar-brand theme-primary" href="#">Lame Dungeon</a>
             <button class="navbar-toggler dungeon-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dungeonNav" aria-controls="dungeonNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +19,7 @@
                 <span class="dungeon-toggler-bar"></span>
                 <span class="dungeon-toggler-bar"></span>
             </button>
-            <div class="collapse navbar-collapse" id="dungeonNav">
+            <div class="collapse dungeon-collapse" id="dungeonNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#intro">The Gate</a>
@@ -35,8 +35,8 @@
     <!-- Intro / Hero -->
     <section id="intro" class="dungeon-hero d-flex align-items-center justify-content-center text-center">
         <div class="container py-5">
-            <h1 class="display-3 fw-bold heading-glow">Welcome to the lamest dungeon on the internet...</h1>
-            <p class="lead mt-3 text-body-secondary">A portfolio of pixel art, character designs, and other creatures found lurking in the dark.</p>
+            <h1 class="fs-5xl fw-bold heading-glow">Welcome to the lamest dungeon on the internet...</h1>
+            <p class="fs-lg mt-3 fg-3">A portfolio of pixel art, character designs, and other creatures found lurking in the dark.</p>
             <a href="#entities" class="btn btn-outline theme-primary mt-4">Descend</a>
         </div>
     </section>
@@ -45,25 +45,42 @@
     <section id="entities" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold heading-glow">~ Entities ~</h2>
-                <p class="text-body-secondary">The creatures that wander these halls.</p>
+                <h2 class="fs-4xl fw-bold heading-glow">~ Entities ~</h2>
+                <p class="fg-3">The creatures that wander these halls.</p>
             </div>
 
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <div class="row row-cols-1 sm:row-cols-2 md:row-cols-3 lg:row-cols-4 g-4">
                 <!-- Entity cards go here -->
                 <div class="col">
-                    <div class="card entity-card h-100 border-primary-subtle">
+                    <div class="card entity-card h-100 border-subtle-primary">
                         <img src="./art/entities/bread-sensei.gif" class="card-img-top entity-img" alt="Bread Sensei">
                         <div class="card-body">
                             <h5 class="card-title theme-primary">Bread Sensei</h5>
-                            <p class="card-text text-body-secondary">An ancient loaf of wisdom. His crust has seen centuries.</p>
+                            <p class="card-text fg-3">An ancient loaf of wisdom. His crust has seen centuries.</p>
                         </div>
-                        <div class="card-footer bg-transparent border-primary-subtle">
+                        <div class="card-footer bg-transparent border-subtle-primary">
                             <dl class="entity-meta mb-0">
                                 <dt>Inspired by</dt>
                                 <dd>Master Roshi (<cite>Dragon Ball</cite>)</dd>
-                                <dt>Idea by</dt>
+                                <dt>Created by</dt>
                                 <dd>Crouton</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card entity-card h-100 border-subtle-primary">
+                        <img src="./art/entities/columbus_50000_serves.gif" class="card-img-top entity-img" alt="Columbus 50k Serves">
+                        <div class="card-body">
+                            <h5 class="card-title theme-primary">Columbus 50000</h5>
+                            <p class="card-text fg-3">Even in death, Columbus serves the emperor.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-subtle-primary">
+                            <dl class="entity-meta mb-0">
+                                <dt>Inspired by</dt>
+                                <dd>Warhammer 40k</dd>
+                                <dt>Created by</dt>
+                                <dd>Some Asshole</dd>
                             </dl>
                         </div>
                     </div>
@@ -74,16 +91,16 @@
     </section>
 
     <!-- Footer -->
-    <footer class="border-top border-primary-subtle py-4 mt-5">
+    <footer class="border-top border-subtle-primary py-4 mt-5">
         <div class="container">
-            <div class="text-center text-body-secondary mb-3">
+            <div class="text-center fg-3 mb-3">
                 <small>&copy; Michael Lacey &middot; Lame Dungeon Art</small>
             </div>
-            <div class="callout callout-info border-primary-subtle">
+            <div class="callout callout-info border-subtle-primary">
                 <strong>A note from the dungeon keeper:</strong> AI tools were used to help build this website.
                 However, <strong>all artwork displayed here is 100% human-made</strong> — every pixel placed by hand, no generators, no shortcuts.
             </div>
-            <p class="small text-body-secondary text-center mt-3 mb-0">
+            <p class="small fg-3 text-center mt-3 mb-0">
                 Characters and works named under "Inspired by" are the property of their respective owners and are referenced for attribution only.
                 This site is not affiliated with, sponsored, or endorsed by them. All artwork shown is original.
             </p>
