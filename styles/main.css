@@ -18,6 +18,38 @@ body {
   text-shadow: 0 0 40px color-mix(in srgb, var(--bs-primary-base) 30%, transparent);
 }
 
+/* Pixel-art icons flanking a heading: scale with the text, stay crisp, share the glow */
+.heading-icon {
+  height: 1em;
+  width: auto;
+  vertical-align: -0.1em;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 12px color-mix(in srgb, var(--bs-primary-base) 50%, transparent));
+  animation: heading-icon-pulse 3s ease-in-out infinite alternate;
+}
+
+/* Slow breathe between a faint and a strong glow */
+@keyframes heading-icon-pulse {
+  from {
+    filter: drop-shadow(0 0 4px color-mix(in srgb, var(--bs-primary-base) 25%, transparent));
+  }
+  to {
+    filter: drop-shadow(0 0 16px color-mix(in srgb, var(--bs-primary-base) 80%, transparent));
+  }
+}
+
+/* Nav torch: a bit larger than the brand text, flickers faster than the skulls */
+.brand-icon {
+  height: 1.5em;
+  animation-duration: 0.8s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heading-icon {
+    animation: none;
+  }
+}
+
 /* ── Nav toggler ── */
 .dungeon-toggler {
   border: 1px solid var(--bs-primary-border) !important;
@@ -96,6 +128,58 @@ body {
 .entity-meta dd {
   margin: 0;
   color: var(--bs-fg-3);
+}
+
+.entity-meta a {
+  color: var(--bs-primary-fg);
+  text-decoration-color: color-mix(in srgb, var(--bs-primary-fg) 40%, transparent);
+  text-underline-offset: 0.2em;
+}
+
+.entity-meta a:hover {
+  text-decoration-color: currentColor;
+}
+
+/* ── Cross-linked cards: clear the sticky nav and glow when jumped to ── */
+.entity-card[id] {
+  scroll-margin-top: 5rem;
+}
+
+.entity-card:target {
+  border-color: var(--bs-primary-border) !important;
+  box-shadow: 0 0 0 1px var(--bs-primary-border),
+              0 8px 24px color-mix(in srgb, var(--bs-primary-base) 35%, transparent);
+}
+
+/* ── Creator cards: no art, so center the name and tagline ── */
+.creator-card .card-body {
+  text-align: center;
+}
+
+.creator-bio {
+  font-size: 0.875rem;
+}
+
+.creator-bio h6 {
+  margin-bottom: 0.25rem;
+  color: var(--bs-primary-fg);
+  font-size: inherit;
+  font-weight: 600;
+}
+
+.creator-bio p {
+  color: var(--bs-fg-3);
+}
+
+/* ── Entity filters: purple-edged chips; .active fills with primary ── */
+.entity-filters .chip {
+  --bs-chip-border-color: var(--bs-primary-border);
+}
+
+/* Clear chip stays outlined so it reads as an action, not a creator */
+.entity-filters .chip-clear {
+  --bs-chip-bg: transparent;
+  --bs-chip-color: var(--bs-primary-fg);
 }
 
 /* ── Callout ── */

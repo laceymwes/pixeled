@@ -29,6 +29,7 @@ Single-page layout with a dark aesthetic and purple accent color.
 ```
 index.html              — single-page portfolio (all sections here)
 styles/main.css         — custom CSS (Bootstrap variable overrides + component styles)
+scripts/main.js         — small vanilla JS (entity creator filter chips)
 art/entities/           — entity/character art assets and related pages
 ```
 
